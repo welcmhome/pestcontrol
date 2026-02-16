@@ -34,7 +34,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.08 }}
             className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight"
           >
-            Save Florida Pest Control
+            Florida Pest Control
           </motion.h1>
 
           <motion.p

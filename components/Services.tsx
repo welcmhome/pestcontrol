@@ -18,22 +18,22 @@ const services = [
   {
     name: 'Rodent Control',
     description: 'Exclusion, trapping, and cleanup. We seal entry points and prevent reinfestation.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?q=80&w=800&auto=format&fit=crop',
   },
   {
     name: 'Termite Protection',
     description: 'Inspection and treatment to protect your property from termite damage.',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=800&auto=format&fit=crop',
   },
   {
     name: 'Spider Control',
     description: 'Indoor and perimeter treatment to reduce spiders and their prey.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop',
   },
   {
     name: 'Bed Bug Treatment',
     description: 'Thorough bed bug elimination with heat and chemical options. We don’t leave until they’re gone.',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&auto=format&fit=crop',
   },
 ]
 

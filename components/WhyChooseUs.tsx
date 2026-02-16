@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
           >
             <img
               src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1000&auto=format&fit=crop"
-              alt="Professional pest control technician"
+              alt="Pest control technician at residential property"
               className="w-full h-full object-cover"
             />
           </motion.div>

@@ -173,7 +173,7 @@ export default function Header() {
       >
         {/* Top utility bar — service area / contact (templatable); black on all breakpoints */}
         <div className="bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-2.5 lg:py-2 flex items-center justify-between gap-4 text-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 lg:py-2 flex items-center justify-between gap-4 text-sm">
             <div className="flex items-center gap-2 min-w-0 flex-1 lg:flex-initial justify-center lg:justify-start">
               <svg className="w-4 h-4 flex-shrink-0 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -197,7 +197,7 @@ export default function Header() {
           </div>
         </div>
 
-        <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8">
           <div className="relative flex items-center justify-between h-20 sm:h-24">
             {/* Desktop: logo + text left */}
             <Link href="/" className="hidden lg:flex items-center gap-3 group shrink-0 min-w-0">

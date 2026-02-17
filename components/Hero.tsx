@@ -36,12 +36,12 @@ export default function Hero() {
             aria-hidden
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/78 via-black/48 to-transparent pointer-events-none" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/88 via-black/58 to-black/25 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
         </div>
 
         {/* Content — white on mobile (tall so only ~1/3 of image visible), over background on desktop */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:pl-16 xl:pl-24 lg:pr-12 pt-24 sm:pt-28 lg:pt-44 pb-10 sm:pb-12 lg:pb-32 bg-white lg:bg-transparent min-h-[70vh] lg:min-h-0 flex flex-col justify-center">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-8 xl:px-12 pt-24 sm:pt-28 lg:pt-44 pb-10 sm:pb-12 lg:pb-32 bg-white lg:bg-transparent min-h-[70vh] lg:min-h-0 flex flex-col justify-center">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,13 +114,14 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Mobile only: image below content — modest size, white area feels bigger */}
+        {/* Mobile only: image below content — modest size, with dark overlay */}
         <div className="lg:hidden relative w-full h-[40vh] min-h-[220px] flex-shrink-0 overflow-hidden">
           <img
             src="/assets/hero-technician-truck.png"
             alt="In & Out Florida Pest Control technician with company truck"
             className="w-full h-full object-cover object-center"
           />
+          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
         </div>
       </div>
 

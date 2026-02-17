@@ -166,9 +166,9 @@ export default function Header() {
             : 'bg-transparent shadow-none border-transparent'
         } ${mobileHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
       >
-        {/* Top utility bar — light gray; mobile: "South Florida" only, desktop: "Service for South Florida" + phone */}
-        <div className="bg-gray-200 text-gray-800">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 py-2.5 lg:py-2 flex items-center justify-between gap-4 text-sm">
+        {/* Top utility bar — gray; mobile: "South Florida" centered, desktop: "Service for South Florida" + phone */}
+        <div className="bg-gray-300 text-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 py-2.5 lg:py-2 flex items-center justify-center sm:justify-between gap-4 text-sm">
             {topBarConfig.showPhone && (
               <a
                 href={`tel:${topBarConfig.phoneNumber}`}
@@ -180,12 +180,12 @@ export default function Header() {
                 Call {topBarConfig.phoneDisplay}
               </a>
             )}
-            <div className="flex items-center gap-2 min-w-0 flex-1 justify-end lg:justify-end">
+            <div className="flex items-center gap-2 min-w-0 flex-1 justify-center sm:justify-end">
               <svg className="w-4 h-4 flex-shrink-0 text-gray-600 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <span className="truncate text-right">
+              <span className="truncate text-center sm:text-right">
                 <span className="sm:hidden font-semibold">{topBarConfig.serviceLabel}</span>
                 <span className="hidden sm:inline">
                   Service for <strong>{topBarConfig.serviceLabel}</strong>

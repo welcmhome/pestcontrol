@@ -37,7 +37,7 @@ export default function Hero() {
             className="absolute inset-0 w-full h-full object-cover object-right scale-105"
           />
           {/* Gradient from lower-left up (softer on the left) */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-black/50 via-black/25 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent pointer-events-none" />
         </div>
 
         {/* Content — white on mobile (tall so only ~1/3 of image visible), over background on desktop */}

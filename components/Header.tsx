@@ -18,9 +18,10 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    const updateScrolled = () => setIsScrolled(window.scrollY > 20)
+    updateScrolled() // sync on mount so transparent state is correct
+    window.addEventListener('scroll', updateScrolled)
+    return () => window.removeEventListener('scroll', updateScrolled)
   }, [])
 
   useEffect(() => {
@@ -135,14 +136,11 @@ export default function Header() {
         )}
       </AnimatePresence>
 
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? 'bg-white shadow-md'
-            : 'bg-transparent border-transparent lg:bg-white/95 lg:backdrop-blur-sm lg:border-b lg:border-gray-100'
+            : 'bg-transparent shadow-none border-transparent lg:bg-white/95 lg:backdrop-blur-sm lg:border-b lg:border-gray-100'
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -211,7 +209,7 @@ export default function Header() {
             </button>
           </div>
         </nav>
-      </motion.header>
+      </header>
     </>
   )
 }

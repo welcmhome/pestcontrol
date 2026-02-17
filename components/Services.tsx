@@ -49,7 +49,7 @@ export default function Services() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} className="py-20 sm:py-28 px-6 sm:px-8 lg:px-12 bg-gray-50" id="services">
+    <section ref={ref} className="py-20 sm:py-28 px-6 sm:px-8 lg:px-12 bg-gray-50 border-t border-gray-200" id="services">
       <div className="max-w-6xl mx-auto">
         <div className="border-l-4 border-gray-900 pl-6 mb-14">
           <motion.p

@@ -28,7 +28,6 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [mobileHeaderVisible, setMobileHeaderVisible] = useState(true)
-  const [serviceType, setServiceType] = useState<'residential' | 'commercial'>('residential')
   const lastScrollYRef = useRef(0)
 
   useEffect(() => {
@@ -167,13 +166,13 @@ export default function Header() {
             : 'bg-transparent shadow-none border-transparent'
         } ${mobileHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
       >
-        {/* Top utility bar — Orkin-style: phone left, service area right */}
-        <div className="bg-black text-white">
+        {/* Top utility bar — light gray; mobile: "South Florida" only, desktop: "Service for South Florida" + phone */}
+        <div className="bg-gray-200 text-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-5 py-2.5 lg:py-2 flex items-center justify-between gap-4 text-sm">
             {topBarConfig.showPhone && (
               <a
                 href={`tel:${topBarConfig.phoneNumber}`}
-                className="inline-flex items-center gap-1.5 flex-shrink-0 text-white/95 hover:text-white transition-colors"
+                className="hidden sm:inline-flex items-center gap-1.5 flex-shrink-0 text-gray-700 hover:text-gray-900 transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -181,48 +180,22 @@ export default function Header() {
                 Call {topBarConfig.phoneDisplay}
               </a>
             )}
-            <div className="flex items-center gap-2 min-w-0 flex-1 justify-end">
-              <svg className="w-4 h-4 flex-shrink-0 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+            <div className="flex items-center gap-2 min-w-0 flex-1 justify-end lg:justify-end">
+              <svg className="w-4 h-4 flex-shrink-0 text-gray-600 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <span className="truncate text-right">
-                Service for <strong>{topBarConfig.serviceLabel}</strong>
+                <span className="sm:hidden font-semibold">{topBarConfig.serviceLabel}</span>
+                <span className="hidden sm:inline">
+                  Service for <strong>{topBarConfig.serviceLabel}</strong>
+                </span>
               </span>
             </div>
           </div>
         </div>
 
-        {/* Service type bar — Orkin-style: red active tab, dark grey inactive, diagonal divider */}
-        <div className="relative flex w-full bg-gray-800">
-          <button
-            type="button"
-            onClick={() => setServiceType('residential')}
-            className={`relative flex-1 min-w-0 py-4 px-6 sm:px-8 font-bold text-lg text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-inset ${
-              serviceType === 'residential' ? 'bg-red-600' : 'bg-gray-800 hover:bg-gray-700'
-            }`}
-          >
-            Residential
-            {/* Diagonal cut: grey triangle on right edge so red/grey meets Commercial in one line */}
-            <span
-              className="absolute right-0 top-0 h-full w-8 bg-gray-800 pointer-events-none"
-              style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}
-              aria-hidden
-            />
-          </button>
-          <button
-            type="button"
-            onClick={() => setServiceType('commercial')}
-            className={`relative flex-1 min-w-0 -ml-8 py-4 pl-10 pr-6 sm:pl-12 sm:pr-8 font-bold text-lg text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-inset ${
-              serviceType === 'commercial' ? 'bg-red-600' : 'bg-gray-800 hover:bg-gray-700'
-            }`}
-            style={{ clipPath: 'polygon(2rem 0, 100% 0, 100% 100%, 0 100%)' }}
-          >
-            Commercial
-          </button>
-        </div>
-
-        {/* Main nav: mobile = white bar (Orkin-style); desktop = transparent then white on scroll */}
+        {/* Main nav: mobile = white bar; desktop = transparent then white on scroll */}
         <nav
           className={`max-w-7xl mx-auto px-6 sm:px-8 lg:px-5 transition-colors duration-300 ${
             isScrolled ? 'bg-white' : 'bg-white lg:bg-transparent'

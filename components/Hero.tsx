@@ -13,19 +13,19 @@ const heroReviewSnippets = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-0 pt-20 lg:pt-24 overflow-hidden bg-white">
-      {/* Mobile only: full-bleed image from section top so no white gap */}
-      <div className="absolute inset-0 z-0 lg:hidden min-h-[55vh]">
+    <section className="relative min-h-[100dvh] lg:min-h-0 pt-20 lg:pt-24 overflow-hidden bg-white">
+      {/* Mobile only: full-bleed image fills viewport (portrait + landscape), very low opacity */}
+      <div className="absolute inset-0 z-0 lg:hidden min-h-[100dvh] min-w-full">
         <img
           src="/assets/hero-pest-control.png"
           alt=""
           aria-hidden
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          className="absolute inset-0 w-full h-full min-w-full min-h-full object-cover object-center opacity-[0.22]"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/92 via-white/82 to-white/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/96 via-white/94 to-white/90" />
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
       </div>
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[55vh] lg:min-h-[70vh] items-center">
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100dvh-5rem)] lg:min-h-[70vh] items-center">
         {/* Left: Text content — on mobile this sits on top of the image */}
         <div className="relative z-10 flex flex-col justify-center px-6 sm:px-10 lg:pl-16 lg:pr-12 py-16 lg:py-24 order-2 lg:order-1">
           <motion.p

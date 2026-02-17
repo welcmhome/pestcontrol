@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, DM_Serif_Display } from 'next/font/google'
+import { Inter, Oswald } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -8,10 +8,9 @@ const inter = Inter({
   display: 'swap',
 })
 
-const dmSerifDisplay = DM_Serif_Display({
-  weight: '400',
+const oswald = Oswald({
   subsets: ['latin'],
-  variable: '--font-dm-serif',
+  variable: '--font-oswald',
   display: 'swap',
 })
 
@@ -31,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSerifDisplay.variable}`}>
+    <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
       <body className="overflow-x-hidden bg-white">{children}</body>
     </html>
   )

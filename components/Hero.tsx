@@ -44,8 +44,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.08 }}
             className="lg:hidden"
           >
-            <div className="font-dm-serif text-4xl sm:text-5xl font-normal tracking-tight text-gray-900 leading-tight">
-              In & Out
+            <div className="font-oswald text-4xl sm:text-5xl font-bold tracking-wide text-gray-900 leading-none uppercase">
+              IN & OUT
             </div>
             <div className="text-xl sm:text-2xl font-semibold text-primary-green mt-1">
               Florida Pest Control

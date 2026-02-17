@@ -8,7 +8,7 @@ const localImages = [
   '/assets/IMAGE%201.jpeg',
   '/assets/IMAGE%202.png',
   '/assets/IMAGE%203.jpg',
-  '/assets/IMAGE%204.JPG',
+  '/assets/hero-pest-control.png',
 ]
 
 const services = [

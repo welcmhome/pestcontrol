@@ -63,8 +63,8 @@ export default function WhyChooseUs() {
             className="relative aspect-[4/3] rounded-2xl overflow-hidden border-2 border-gray-900/20"
           >
             <img
-              src="/assets/IMAGE%204.JPG"
-              alt="Pest control technician at residential property"
+              src="/assets/hero-pest-control.png"
+              alt="Pest control technician treating a palm tree at a residential property"
               className="w-full h-full object-cover"
             />
           </motion.div>

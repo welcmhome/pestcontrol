@@ -17,7 +17,7 @@ export default function Hero() {
       {/* Mobile only: full-bleed image behind content, very low opacity; fills content height */}
       <div className="absolute inset-0 z-0 lg:hidden min-h-full min-w-full">
         <img
-          src="/assets/hero-pest-control.png"
+          src="/assets/IMAGE%204.JPG"
           alt=""
           aria-hidden
           className="absolute inset-0 w-full h-full min-w-full min-h-full object-cover object-center opacity-[0.22]"
@@ -111,8 +111,8 @@ export default function Hero() {
         <div className="hidden lg:block relative lg:order-2 min-h-full">
           <div className="relative w-full h-full min-h-[70vh]">
             <img
-              src="/assets/hero-pest-control.png"
-              alt="Pest control technician treating a palm tree at a residential property"
+              src="/assets/IMAGE%204.JPG"
+              alt="Pest control technician at residential property"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent" />

@@ -137,7 +137,7 @@ export default function Header() {
       </AnimatePresence>
 
       <header
-        className={`relative lg:fixed lg:top-0 lg:left-0 lg:right-0 z-50 transition-all duration-300 bg-white lg:bg-transparent shadow-none border-b border-gray-100 lg:border-transparent ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent shadow-none border-transparent ${
           isScrolled
             ? 'lg:bg-white lg:shadow-md'
             : 'lg:bg-white/95 lg:backdrop-blur-sm lg:border-b lg:border-gray-100'

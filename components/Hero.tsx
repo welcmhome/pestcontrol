@@ -13,7 +13,7 @@ const heroReviewSnippets = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-0 lg:min-h-0 pt-0 lg:pt-24 overflow-hidden bg-white">
+    <section className="relative min-h-0 lg:min-h-0 pt-20 lg:pt-24 overflow-hidden bg-white">
       {/* Mobile only: full-bleed image behind content, very low opacity; fills content height */}
       <div className="absolute inset-0 z-0 lg:hidden min-h-full min-w-full">
         <img

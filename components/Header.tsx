@@ -28,6 +28,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [mobileHeaderVisible, setMobileHeaderVisible] = useState(true)
+  const [serviceType, setServiceType] = useState<'residential' | 'commercial'>('residential')
   const lastScrollYRef = useRef(0)
 
   useEffect(() => {
@@ -190,6 +191,28 @@ export default function Header() {
               </span>
             </div>
           </div>
+        </div>
+
+        {/* Orkin-style service type bar: red tab with angled top-right, dark tab with matching angle */}
+        <div className="flex w-full">
+          <button
+            type="button"
+            onClick={() => setServiceType('residential')}
+            className={`flex-1 py-3 sm:py-4 pl-6 pr-8 font-bold text-base sm:text-lg text-white transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white/50 [clip-path:polygon(0_0,calc(100%-1.5rem)_0,100%_100%,0_100%)] ${
+              serviceType === 'residential' ? 'bg-red-600' : 'bg-gray-700'
+            }`}
+          >
+            Residential
+          </button>
+          <button
+            type="button"
+            onClick={() => setServiceType('commercial')}
+            className={`flex-1 py-3 sm:py-4 pl-8 pr-6 font-bold text-base sm:text-lg text-white transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white/50 [clip-path:polygon(1.5rem_0,100%_0,100%_100%,0_100%)] ${
+              serviceType === 'commercial' ? 'bg-red-600' : 'bg-gray-800'
+            }`}
+          >
+            Commercial
+          </button>
         </div>
 
         {/* Main nav: mobile = white bar (Orkin-style); desktop = transparent then white on scroll */}
